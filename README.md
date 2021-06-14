@@ -1,4 +1,34 @@
 # File-Transfer-using-P2P-
+Node.py Program
+
+Since this is a decentralized system, there are no separate server and client scripts. Instead each Node.py script acts as both a server and a client therefore allowing p2p connections to other Nodes. Any Node can join the network but initially it must know the IP and Port of another Node that is already part of the Chord network.
+
+To Node.py requires command line arguments in the form: python Node.py IP Port
+For example: python Node.py 127.0.0.1 5000
+
+All subsequent Nodes also start in the same way.
+Remember: A Node can have the same IP as another, but not the same IP and same Port.
+Example to Get Started
+
+Disclaimer: The IP and Port numbers are just for illustration. You can use a different combination.
+
+The first Node of the Chord network will be initialized in same way as stated above.
+To reiterate, we begin in the Node.py directory and run the command:
+python Node.py 127.0.0.1 5000
+Lets call this Node 1 for this example.
+
+You start one or more subsequent Nodes in the same way by providing each with an IP Port combination. Lets call them Node 2, Node 3 and so on.
+
+When the nodes start, you will be displayed with a number of options:
+Join
+
+Now you can connect one Node to another in any way. Once you choose to join the network, you can use any other's Node's IP Port combination to join the network. If you go to Node 2, choose join network and type in Node 1's IP Port. Both Node 1 and Node 2 will be now be joined and part of the network. Similarly, other Nodes can join.
+Leave
+
+Nodes can leave the network by informing the Chord and hence other Nodes of its departure. Note: The Chord also supports uninformed disconnection/failure of nodes, however informed leaving is still preferred.
+Upload and Download File
+
+Type the name of the file present in the same directory. Uploading file will send the file to the relevant Node based on hash of filename. Downloading will be done from the relevant Node with the file. Chord supports large file transfer by sending file in chunks (based on buffer size).
 System architecture and design
 
 Finger Table: 
