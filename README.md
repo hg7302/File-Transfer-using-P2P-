@@ -22,5 +22,4 @@ Fix_fingers(): updates finger tables.
 check_predecessor(): Periodically checks in predecessor is alive
  4. IMPLEMENTATION
        Fault Tolerance: To ensure reliability of network any node which  is leaving the network will ensure that system is not reaching in an unstable state.The node which is leaving the network will ping the successor and transfer all the files if any uploaded to the node will be transferred to its successor ensuring reliability in the network.
-
-            Replication: Each file across the node replicated to the next successor when uploading a file to the node so that in case of any failure of node and if by any chance file is not transferred or the node becomes a failure, the file is being available to its successor node ensuring data reliability across the network.
+Replication: Each file across the node replicated to the next successor when uploading a file to the node so that in case of any failure of node and if by any chance file is not transferred or the node becomes a failure, the file is being available to its successor node ensuring data reliability across the network.
